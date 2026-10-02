@@ -137,7 +137,7 @@ class "BrepPointAPI" (
     doc = """ Associated and packed point descriptions of brep objects defined by a 3d point. """
     customData = { token apiSchemaType = "multipleApply"
                    token propertyNamespacePrefix = "brep"
-                   token[] apiSchemaCanOnlyApplyTo = ["PrelimUsdSolidPrelimBrepArray"]
+                   token[] apiSchemaCanOnlyApplyTo = ["PrelimBrepArray"]
                    token[] apiSchemaAllowedInstanceNames = ["vertexPoint", "shellPoint"]
                  }
 )
@@ -180,7 +180,7 @@ class "BrepCurve3dNurbAPI" (
     consistent with RenderMan's NURB patch specification. """
     customData = { token apiSchemaType = "multipleApply"
                    token propertyNamespacePrefix = "brep"
-                   token[] apiSchemaCanOnlyApplyTo = ["PrelimUsdSolidPrelimBrepArray"]
+                   token[] apiSchemaCanOnlyApplyTo = ["PrelimBrepArray"]
                    token[] apiSchemaAllowedInstanceNames = ["edge3dNurb", "wireEdge3dNurb"]
                  }
 )
@@ -236,7 +236,7 @@ class "BrepCurveUvNurbAPI" (
     inherits = </APISchemaBase>
     doc = """ Associated and packed 2d NURB UV curve descriptions of brep:edgeuses defined by 2d BSpline curves. """
     customData = { token apiSchemaType = "singleApply"
-                   token[] apiSchemaCanOnlyApplyTo = ["PrelimUsdSolidPrelimBrepArray"]
+                   token[] apiSchemaCanOnlyApplyTo = ["PrelimBrepArray"]
                  }
 )
 {
@@ -312,7 +312,7 @@ class "BrepSurfaceNurbAPI" (
     The authored points, orders, knots, weights, and ranges are all that is required to render the nurbs patch.
     """
     customData = { token apiSchemaType = "singleApply"
-                   token[] apiSchemaCanOnlyApplyTo = ["PrelimUsdSolidPrelimBrepArray"]
+                   token[] apiSchemaCanOnlyApplyTo = ["PrelimBrepArray"]
                  }
 )
 {
